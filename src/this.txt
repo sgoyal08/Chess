@@ -1,0 +1,60 @@
+public void addMembers(String[] names, int gradYear)
+{
+    for (String n : names)
+    {
+        MemberInfo m = new MemberInfo(n, gradYear, true);
+        memberList.add(m);
+    }
+}
+
+public ArrayList<MemberInfo> removeMembers(int year)
+{
+    ArrayList<MemberInfo> remove = new ArrayList<MemberInfo>();
+    for (int i = 0; i < memberList.size(); i++)
+    {
+        if ((memberList.get(i).getGradYear() <= year)
+        {
+
+             if ((memberList.get(i).inGoodStanding() == true))
+             {
+                 remove.add(memberList.get(i);
+             }
+             memberList.remove(i);
+        }
+    }
+
+
+    return remove;
+}
+
+public static boolean isNonZeroRow(int[][] array2D, int r)
+{
+    for (int i = 0; i < array2D[0].length; i++)
+    {
+        if (array2D[r][i] == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+public static int[][] resize(int[][] array2D)
+{
+    int r = array2D.length;
+    int c = array2D[0].length;
+    int temp = 0;
+    int[][] sized = new int[numNonZeroRows(array2D)][c];
+    for (int i = 0; i < array2D.length; i++)
+    {
+        if (isNonZeroRow(array2D, i))
+        {
+            for (int j = 0; j < c; j++)
+            {
+                sized[temp][j]= array2D[i][j];
+            }
+            temp++;
+        }
+    }
+    return sized;
+}

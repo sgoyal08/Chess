@@ -1,10 +1,14 @@
 public class Piece {
     private boolean isWhite;
-    private String typePiece;
+    private boolean isTaken;
 
-    public Piece(String typePiece)
+    public Piece(boolean isWhite)
     {
-        this.typePiece = typePiece;
+        this.isWhite = isWhite;
+    }
+
+    public void setTaken() {
+        isTaken = true;
     }
 
     public boolean isWhite() {

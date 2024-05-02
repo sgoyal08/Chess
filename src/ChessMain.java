@@ -1,6 +1,10 @@
 public class ChessMain {
-    public static void ChessMain(String[] args)
+   private ChessGameViewer window;
+    public ChessMain()
     {
-
+        window = new ChessGameViewer();
+    }
+    public static void main(String[] args) {
+        ChessGameViewer c = new ChessGameViewer();
     }
 }
