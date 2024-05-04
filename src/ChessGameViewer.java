@@ -69,17 +69,17 @@ public class ChessGameViewer extends JFrame {
         g.drawImage(BBishop, 490, 650, this);
 
     }
-    public void drawPiece(Graphics g)
-    {
-        for (int i = 0; i < 8; i++)
-        {
-            for (int j = 0; j < 8; j++)
-            {
-                // draw the proper piece, based on the coordinate you are at, ie, if u know ur on row 2, or 7, fill the row with pawns.
-                // a series of if statements?
-            }
-        }
+//    public void drawPiece(Graphics g)
+//    {
+//        for (int i = 0; i < 8; i++)
+//        {
+//            for (int j = 0; j < 8; j++)
+//            {
+//                // draw the proper piece, based on the coordinate you are at, ie, if u know ur on row 2, or 7, fill the row with pawns.
+//                // a series of if statements?
+//            }
+//        }
 //        g.drawImage(Image BBishop, 1, 2, 3, )
     }
 
-}
+

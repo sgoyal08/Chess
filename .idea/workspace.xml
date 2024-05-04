@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f43fd7b-0503-4e4c-9124-db61b8d38f17" name="Changes" comment="Board show up + bishop logic. txt file is old cs A frqs practice.">
+    <list default="true" id="8f43fd7b-0503-4e4c-9124-db61b8d38f17" name="Changes" comment="Bishop shows up + started brainstorming how to draw all the pieces when the board is first shown / how to refactor images to fit properly. Also built out logic for Queen backend. Cody helped out with logic behind Knight movement during office hours.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChessGameViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessGameViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Knight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/this.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/this.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +85,20 @@
       <option name="project" value="LOCAL" />
       <updated>1714686400347</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bishop shows up + started brainstorming how to draw all the pieces when the board is first shown / how to refactor images to fit properly. Also built out logic for Queen backend. Cody helped out with logic behind Knight movement during office hours.">
+      <option name="closed" value="true" />
+      <created>1714795786471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714795786471</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Board show up + bishop logic. txt file is old cs A frqs practice." />
-    <option name="LAST_COMMIT_MESSAGE" value="Board show up + bishop logic. txt file is old cs A frqs practice." />
+    <MESSAGE value="Bishop shows up + started brainstorming how to draw all the pieces when the board is first shown / how to refactor images to fit properly. Also built out logic for Queen backend. Cody helped out with logic behind Knight movement during office hours." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bishop shows up + started brainstorming how to draw all the pieces when the board is first shown / how to refactor images to fit properly. Also built out logic for Queen backend. Cody helped out with logic behind Knight movement during office hours." />
   </component>
 </project>
