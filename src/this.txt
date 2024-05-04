@@ -1,60 +1,113 @@
-public void addMembers(String[] names, int gradYear)
+MAKE MATTHEW A LIST OF TOPICS TO REVIEW ON MONDAY!!!!!!!!!
+
+
+public class Textbook extends Book
 {
-    for (String n : names)
+    private int editionNum;
+
+
+    public Textbook(int editionNum, String bookTitle, double bookPrice)
     {
-        MemberInfo m = new MemberInfo(n, gradYear, true);
-        memberList.add(m);
+        super(bookTitle, bookPrice);
+        this.editionNum = editionNum;
     }
-}
-
-public ArrayList<MemberInfo> removeMembers(int year)
-{
-    ArrayList<MemberInfo> remove = new ArrayList<MemberInfo>();
-    for (int i = 0; i < memberList.size(); i++)
+    public getEdition()
     {
-        if ((memberList.get(i).getGradYear() <= year)
+        return editionNum;
+    }
+    public boolean canSubstituteFor(Textbook sub)
+    {
+        if ((sub.getTitle().equals(this.getTitle())) && (editionNum >= other.getEdition()))
         {
-
-             if ((memberList.get(i).inGoodStanding() == true))
-             {
-                 remove.add(memberList.get(i);
-             }
-             memberList.remove(i);
+            return true;
         }
+        return false;
     }
 
-
-    return remove;
-}
-
-public static boolean isNonZeroRow(int[][] array2D, int r)
-{
-    for (int i = 0; i < array2D[0].length; i++)
+    public String getBookInfo()
     {
-        if (array2D[r][i] == 0)
-        {
-            return false;
-        }
+        return super.getBookInfo() + "-" + editionNum;
     }
-    return true;
 }
 
-public static int[][] resize(int[][] array2D)
+public double getAverageRating()
 {
-    int r = array2D.length;
-    int c = array2D[0].length;
-    int temp = 0;
-    int[][] sized = new int[numNonZeroRows(array2D)][c];
-    for (int i = 0; i < array2D.length; i++)
+    int sum = 0;
+    for (int i = 0; i < allReviews.length; i++)
     {
-        if (isNonZeroRow(array2D, i))
+        sum += allReviews[i].getRating();
+    }
+    return (double)sum / allReviews.length;
+}
+
+
+public ArrayList<String> collectComments()
+{
+    ArrayList<String> comments = new ArrayList<String>();
+
+    for (int i = 0; i < allReviews.length; i++)
+    {
+        String c = allReviews[i].getComment();
+        if (c.indexOf("!") != -1)
         {
-            for (int j = 0; j < c; j++)
+            String last = c.substring(c.length() - 1);
+            if (!last.equals("!") && (last != "."))
             {
-                sized[temp][j]= array2D[i][j];
+                c += ".";
             }
-            temp++;
+            comments.add(i + "-" + c);
+
         }
     }
-    return sized;
+    return comments;
 }
+
+
+public void repopulate()
+{
+    for (int i = 0; i < grid.length; i++)
+    {
+        for (int j = 0; j < grid[0].length; j++)
+        {
+            int num = (int)(Math.random() * MAX) + 1;
+            while (num %10 != 0 || num % 100 == 0)
+            {
+                num = (int)(Math.random() * MAX) + 1;
+            }
+            grid[i][j] = num;
+        }
+    }
+}
+public int countIncreasingCols()
+{
+    int count = 0;
+    for (int col = 0; col < grid[0].length; col++)
+    {
+        boolean order = true;
+        for (int row = 1; row < grid.length; row++)
+        {
+            if (grid[row][col] < grid[row-1][col])
+            {
+                order = false;
+            }
+        }
+        if (order == true)
+        {
+            count++;
+        }
+    }
+
+
+
+    return count;
+}
+
+
+
+
+
+
+
+
+
+
