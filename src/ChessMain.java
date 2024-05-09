@@ -6,5 +6,6 @@ public class ChessMain {
     }
     public static void main(String[] args) {
         ChessGameViewer c = new ChessGameViewer();
+        c.repaint();
     }
 }

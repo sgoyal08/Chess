@@ -103,6 +103,387 @@ public int countIncreasingCols()
 }
 
 
+2023 FRQ
+
+
+public int findFreeBlock(int period, int duration)
+{
+    int len = 0;
+    for (int i = 0; i < 60; i++)
+    {
+        if (isMinuteFree(period, i) == true)
+        {
+            len+=1;
+            if (len == duration)
+            {
+                return i - len + 1;
+            }
+
+        }
+        else{
+            len = 0;
+        }
+    }
+    return -1;
+
+}
+
+public boolean makeAppointment(int startPeriod, int endPeriod, int duration)
+{
+
+    for (int period = startPeriod; period <= endPeriod; period++)
+    {
+         int minute = findFreeBlock(period, duration);
+         if (minute != -1)
+         {
+            reserveBlock(period, minute, duration);
+            return true;
+         }
+    }
+    return false;
+}
+
+
+
+public class Sign
+{
+    private String message;
+    private int width;
+    public Sign(String message, int width)
+    {
+        this.message = message;
+        this.width = width;
+    }
+    public String getLines()
+    {
+        int lines = numberOfLines();
+        if (lines == 0)
+        {
+            return null;
+        }
+        String sign = "";
+        for (int i = 1; i < lines; i++)
+        {
+            sign+= message.substring((i-1) * width, i * width) + ";";
+        }
+        return sign + message.substring((lines - 1) * width);
+    }
+    public int numberOfLines()
+    {
+        int mLength = message.length();
+        if (mLength % width == 0)
+        {
+            return mLength / width;
+        }
+        else
+        {
+            return mLength / width + 1;
+        }
+    }
+
+public void cleanData(double lower, double upper)
+{
+    for (int i = 0; i < temperatures.size(); i++)
+    {
+        if (temperatures.get(i) < lower || temperatures.get(i) > upper)
+        {
+            temperatures.remove(i);
+        }
+    }
+}
+
+public int longestHeatWave(double threshold)
+{
+
+    int wLength = 0;
+    int maxLength = 0;
+
+    for (double temp : temperatures)
+    {
+        if (temp > threshold)
+        {
+            wLength++;
+            if (wLength > maxLength)
+            {
+                maxLength = wLength;
+            }
+        }
+        else
+        {
+            wLength = 0;
+        }
+    }
+    return maxLength;
+}
+
+
+public boolean moveCandyToFirstRow(int col)
+{
+
+    if (box[0][col] != null)
+    {
+        return true;
+    }
+    for (int i = 1; i < box.length; i++)
+    {
+        if (box[i][col] != null)
+        {
+            box[0][col] = box[i][col;
+            box[i][col] = null;
+            return true;
+        }
+    }
+    return false;
+}
+
+
+
+public Candy removeNextByFlavor(String flavor)
+{
+    for (int r = box.length - 1; r >= 0 ; r--)
+    {
+        for (int c = 0; c < box[0].length; c++)
+        {
+            if ((box[r][c] != null) && (box[r][c].getFlavor().equals(flavor)))
+            {
+                Candy took = box[r][c];
+                box[r][c] = null;
+                return took;
+            }
+        }
+    }
+    return null;
+}
+
+public LogMessage(String message)
+{
+    int colon = message.indexOf(":");
+    machineId = message.substring(0, colon);
+    description = message.substring(colon + 1);
+}
+
+
+
+public boolean containsWord(String keyWord)
+{
+    if (description.equals(keyword))
+    {
+        return true;
+    }
+    if (description.indexOf(keyword + " ") == 0)
+    {
+        return true;
+    }
+    if (description.indexOf(" " + keyword + " ") == 0)
+    {
+        return true;
+    }
+    if (description.indexOf(" " + keyword + " ") != -1)
+    {
+        return true;
+    }
+    if (description.length() > keyword.length())
+    {
+        if (description.substring(description.length() - (keyword.length() - 1).equals(" " + keyword)
+        {
+            return true;
+        }
+    }
+
+
+    return false;
+}
+
+public List<LogMessage> removeMessages(String keyword)
+{
+    ArrayList<LogMessage> removals = new ArrayList<LogMessage>();
+    for (int i = 0; i < messageList.size(); i++)
+    {
+        if (messageList.get(i).containsWord(keyword)
+        {
+            removals.add(messageList.remove(i);
+            i--;
+        }
+    }
+    return removals;
+}
+
+
+
+private boolean toBeLabeled(int r, int c, boolean[][] blackSquares)
+{
+    return (!blackSquares[r][c]) &&  (r==0 || c==0 || blackSquares[r-1][c]
+    || blackSquares[r][c-1]))))
+}
+
+public Crossword(boolean[][] blackSquares)
+{
+    puzle = new Square[blackSquares.length][blackSquares[0].length];
+    int count = 1;
+
+    for (int r = 0; r < blackSquares.length; r++)
+    {
+        for (int c = 0; c < blackSquares[0].length; c++)
+        {
+            if (blackSquares[r][c] == true)
+            {
+                puzle[r][c] = new Square(true,0);
+            }
+            else{
+                if (toBeLabeled(r, c, blackSquares) == true)
+                {
+                    puzle[r][c] = new Square(false, count);
+                    count++;
+                }
+                else
+                {
+                    puzle[r][c] = new Square(false, 0);
+                }
+            }
+        }
+    }
+}
+
+
+int[] temp = new  int[7];
+int[][] temp = new int[5][6];
+
+
+public SeatingChart(List<Student> studentList, int rows, int cols)
+{
+    seats = new Student[rows][cols];
+    int index = 0;
+    for (int i = 0; i < cols; i++)
+    {
+        for (int j = 0; j < rows; j++)
+        {
+            if (index < studentList.size())
+            {
+                seats[j][i] = studentList.get(index);
+                index++;
+            }
+        }
+    }
+}
+
+
+public int removeAbsentStudents(int allowedAbsences)
+{
+    int absentees = 0;
+    for (int r = 0; r < seats.length; r++)
+    {
+        for (int c = 0; c < seats[0].length; c++)
+        {
+            if (seats[r][c] != null) && seats[r][c].getAbsenceCount() > allowedAbsences)
+            {
+                seats[r][c] = null;
+                absentees++;
+            }
+        }
+    }
+    return absentees;
+}
+
+temp[0].length
+ArrayList<Integer> temp = new ArrayList<Integer>();
+
+temp.get()
+temp.remove()
+temp.add()
+temp.size()
+temp.set()
+temp.isEmpty()
+
+
+
+temp.equals()
+temp.indexOf()
+
+for (int i = 0; i < temp.size()-1; i++)
+{
+    if (temp.get(i) > temp.get(i+1)
+    {
+        for (int j = temp.size() - 1; j >= 0; j--)
+        {
+
+        }
+    }
+
+
+    for (int num : temp)
+    {
+        ArrayList<String> temp2 = new ArrayList<String>();
+        for (String word : temp2)
+        {
+
+        }
+    }
+}
+
+
+public DownloadInfo getDownLoadInfo(String title)
+{
+
+    DownLoadInfo load = null;
+    for (int i = 0; i < downLoadList.size(); i++)
+    {
+        if (downloadList.get(i).getTitle().equals(title)
+        {
+            load = downloadList.get(i);
+        }
+    }
+    return load;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 
 
 

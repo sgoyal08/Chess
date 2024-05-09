@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f43fd7b-0503-4e4c-9124-db61b8d38f17" name="Changes" comment="Bishop shows up + started brainstorming how to draw all the pieces when the board is first shown / how to refactor images to fit properly. Also built out logic for Queen backend. Cody helped out with logic behind Knight movement during office hours.">
+      <change afterPath="$PROJECT_DIR$/src/KeyListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MouseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChessGameViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessGameViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChessMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChessMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/this.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/this.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,8 +98,27 @@
       <option name="project" value="LOCAL" />
       <updated>1714795786471</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Bishop shows up + started brainstorming how to draw all the pieces when the board is first shown / how to refactor images to fit properly. Also built out logic for Queen backend. Cody helped out with logic behind Knight movement during office hours.">
+      <option name="closed" value="true" />
+      <created>1714796150603</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714796150603</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Board show up + bishop logic. txt file is old cs A frqs practice." />

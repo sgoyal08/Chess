@@ -10,7 +10,7 @@ public class Piece {
     public void setTaken() {
         isTaken = true;
     }
-
+//    REMMEBR TO PUT IN NOTES ABOUT CONTENT STANDARDAS LATER!!!!! U HAVE TO HIT AS MANY AS POSSIBLE!!!!!!!!!!!
     public boolean isWhite() {
         return isWhite;
     }
